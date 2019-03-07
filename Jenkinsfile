@@ -11,13 +11,13 @@ sh "ls -l"
 
 stage('Build docker image'){
 
-sh "docker build -t josiahk:latest ."
+sh "docker build -t josiah:latest ."
 }
 
 stage('Docker login to hub and push the image'){
 sh "docker login -u 'zalwa' -p 'Josiah_15' "
-sh "docker tag josiahk:latest zalwa/josiahk:latest"
-sh "docker push zalwa/josiahk:latest"
+sh "docker tag josiah:latest zalwa/josiah:latest"
+sh "docker push zalwa/josiah:latest"
 }
 
 stage('Apply changes to the environment') {
