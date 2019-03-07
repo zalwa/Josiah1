@@ -23,6 +23,8 @@ sh "docker push zalwa/josiah:latest"
 stage('Apply changes to the environment') {
 sh "ls -l"
 }
-
+stage('Run the docker image'){
+            sh "docker container run -d zalwa/josiah:latest"
+        }
 
 }
